@@ -1,0 +1,40 @@
+nav {
+    background-color: #2c2a2a;
+    padding: 10px;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Vertically align items */
+  }
+  
+  nav a {
+    margin-right: 40px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+  }
+  
+  nav a.active {
+    font-weight: bold;
+    color: blue;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: flex-end; /* Alinea los enlaces a la derecha */
+  }
+  
+  .nav-logo {
+    display: flex; /* Make logo a flex container */
+    align-items: center; /* Vertically align logo content */
+    color: #ffffff; /* Text color for logo */
+  }
+  
+  .nav-logo img {
+    margin-right: 10px; /* Space between image and text */
+  }
+
+  .nav-title {
+    font-size: 24px; /* Font size for logo text */
+    align-items: left; /* Remove default margin */
+    color: #ffffff;
+  }

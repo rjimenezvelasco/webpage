@@ -1,0 +1,5 @@
+.carousel-item img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 500px; /* Establece una altura fija (ajusta este valor según tus necesidades) */
+    object-fit: cover; /* Recorta la imagen para llenar el contenedor manteniendo la proporción */
+  }
