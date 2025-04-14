@@ -1,0 +1,102 @@
+
+<div>
+<div>
+    <h1>Ingrese los datos</h1>
+</div>
+    
+
+<form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="nombre" formControlName="nombre">
+      <div *ngIf="registroForm.get('nombre')?.invalid && registroForm.get('nombre')?.touched" class="text-danger">
+        El nombre es obligatorio.
+      </div>
+    </div>
+  
+    <div class="mb-3">
+      <label for="apellidos" class="form-label">Apellidos</label>
+      <input type="text" class="form-control" id="apellidos" formControlName="apellidos">
+      <div *ngIf="registroForm.get('apellidos')?.invalid && registroForm.get('apellidos')?.touched" class="text-danger">
+        Los apellidos son requeridos.
+      </div>
+    </div>
+  
+    <div class="mb-3">
+      <label for="pais" class="form-label">País</label>
+      <input type="text" class="form-control" id="pais" formControlName="pais">
+      <div *ngIf="registroForm.get('pais')?.invalid && registroForm.get('pais')?.touched" class="text-danger">
+        El país es requerido.
+      </div>
+    </div>
+  
+    <div class="mb-3">
+      <label for="telefono" class="form-label">Teléfono</label>
+      <input type="text" class="form-control" id="telefono" formControlName="telefono">
+      <div *ngIf="registroForm.get('telefono')?.invalid && registroForm.get('telefono')?.touched" class="text-danger">
+        El teléfono es requerido.
+      </div>
+    </div>
+  
+    <div class="mb-3">
+      <label for="codigoTelefono" class="form-label">Código de Teléfono</label>
+      <input type="text" class="form-control" id="codigoTelefono" formControlName="codigoTelefono">
+      <div *ngIf="registroForm.get('codigoTelefono')?.invalid && registroForm.get('codigoTelefono')?.touched" class="text-danger">
+        El código de teléfono es requerido.
+      </div>
+    </div>
+  
+    <div class="mb-3">
+      <label for="sexo" class="form-label">Sexo</label>
+      <select class="form-select" id="sexo" formControlName="sexo">
+        <option value="">Seleccione...</option>
+        <option value="masculino">Masculino</option>
+        <option value="femenino">Femenino</option>
+        <option value="otro">Otro</option>
+      </select>
+      <div *ngIf="registroForm.get('sexo')?.invalid && registroForm.get('sexo')?.touched" class="text-danger">
+        El sexo es requerido.
+      </div>
+    </div>
+  
+    <div class="mb-3">
+      <label for="email" class="form-label">Correo electrónico</label>
+      <input type="email" class="form-control" id="email" formControlName="email">
+      <div *ngIf="registroForm.get('email')?.invalid && registroForm.get('email')?.touched" class="text-danger">
+        El correo electrónico es inválido.
+      </div>
+    </div>
+  
+    <div class="mb-3">
+      <label for="provincia" class="form-label">Provincia</label>
+      <input type="text" class="form-control" id="provincia" formControlName="provincia">
+      <div *ngIf="registroForm.get('provincia')?.invalid && registroForm.get('provincia')?.touched" class="text-danger">
+        La provincia es requerida.
+      </div>
+    </div>
+  
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="aceptarWhatsapp" formControlName="aceptarWhatsapp">
+      <label class="form-check-label" for="aceptarWhatsapp">Aceptar envío de datos por WhatsApp</label>
+    </div>
+  
+    <div class="mb-3">
+        <label for="direccion" class="form-label">Dirección</label>
+        <input type="text" class="form-control" id="direccion" formControlName="direccion">
+        <div *ngIf="registroForm.get('direccion')?.invalid && registroForm.get('direccion')?.touched" class="text-danger">
+          La Dirección es obligatoria.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="fecha" class="form-label">Fecha de Nac.</label>
+        <input type="date" class="form-control" id="fecha" formControlName="fecha">
+        <div *ngIf="registroForm.get('fechaNacimiento')?.invalid && registroForm.get('fechaNacimiento')?.touched" class="text-danger">
+          La Fecha de nacimiento es obligatoria.
+        </div>
+      </div>
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>
+  

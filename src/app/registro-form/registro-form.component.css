@@ -1,0 +1,32 @@
+form {
+    width: 80%; /* Ajusta el ancho del formulario según tus necesidades */
+    max-width: 800px; /* Establece un ancho máximo para el formulario */
+    margin: 20px auto; /* Centra el formulario horizontalmente y agrega margen vertical */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: grid; /* Utiliza grid layout para las columnas */
+    grid-template-columns: 1fr 1fr; /* Define dos columnas de igual ancho */
+    grid-gap: 20px; /* Agrega espacio entre las columnas */
+  }
+  
+  .mb-3, .form-check {
+    grid-column: span 2; /* Los campos que ocupan ambas columnas */
+  }
+  
+  .mb-3:nth-child(even), .form-check {
+    grid-column: 1 / 3; /* Asegura que los campos pares ocupen ambas columnas */
+  }
+  
+  .mb-3:nth-child(odd) {
+    grid-column: 1; /* Los campos impares ocupan la primera columna */
+  }
+  
+  .mb-3:nth-child(even) {
+    grid-column: 2; /* Los campos pares ocupan la segunda columna */
+  }
+  
+  button[type="submit"] {
+    grid-column: 1 / 3; /* El botón de envío ocupa ambas columnas */
+    margin-top: 20px;
+  }
